@@ -1,3 +1,3 @@
 ## Redditlone 
 
-Less featured version of popular Reddit, written in Ruby on Rails. 
+git remote add origin git@github.com:baartoszsobczynski/redditlone.git
