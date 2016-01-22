@@ -5,7 +5,7 @@ FactoryGirl.define do
     text          "This is discussion thread text."
   end
 
-  factory :discussion_thread_url, class: DiscussionThread do
+  factory :discussion_url_thread, class: DiscussionThread do
     title         "Check out google page"
     url           "https://www.google.pl/"
   end
