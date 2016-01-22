@@ -14,7 +14,7 @@ RSpec.describe DiscussionThreadController, :type => :controller do
     end
 
     it "assigns discussion threads" do
-      discussion_thread = DiscussionThread.create
+      discussion_thread = create(:discussion_thread)
       get :index
       expect(assigns(:discussion_threads)).to eq([discussion_thread])
     end
