@@ -7,9 +7,19 @@ class DiscussionThread < ActiveRecord::Base
             length: { maximum: 300 },
             format: { without: url_regex_pattern }
 
-  # validates :url,
-  #           format: { with: url_regex_pattern }
+  validates :url,
+            format: { with: url_regex_pattern }, if: "post_type == 'url'"
+
+  validates :url,
+            absence: true, if: "post_type == 'text'"
 
   validates :text,
             length: { maximum: 5000 }
+
+  validates :text,
+            absence: true, if: "post_type == 'url'"
+
+  validates :post_type,
+            inclusion: { in: %w(text url) }
+
 end

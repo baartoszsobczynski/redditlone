@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160123000901) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type"
+    t.string   "post_type"
   end
 
 end
