@@ -6,4 +6,10 @@ class DiscussionThread < ActiveRecord::Base
             presence: true,
             length: { maximum: 300 },
             format: { without: url_regex_pattern }
+
+  # validates :url,
+  #           format: { with: url_regex_pattern }
+
+  validates :text,
+            length: { maximum: 5000 }
 end
